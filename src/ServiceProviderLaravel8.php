@@ -3,6 +3,8 @@
 namespace Hivelink\Laravel;
 
 use Hivelink\HivelinkApi as HivelinkApi;
+use Illuminate\Support\Facades\Notification;
+use Hivelink\Laravel\Channel\HivelinkChannel;
 
 class ServiceProviderLaravel8 extends \Illuminate\Support\ServiceProvider
 {
@@ -26,5 +28,10 @@ class ServiceProviderLaravel8 extends \Illuminate\Support\ServiceProvider
         $this->app->singleton('hivelink', function ($app) {
             return new HivelinkApi($app['config']->get('hivelink.apikey'));
         });
+        Notification::resolved( function ( $service ) {
+            $service->extend( 'hivelink', function ( $app ) {
+                return new HivelinkChannel( $app->make( 'hivelink' ) );
+            } );
+        } );
     }
 }
