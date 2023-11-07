@@ -90,6 +90,10 @@ Run this command in your project dirctory:
 ```
 php artisan vendor:publish
 ```
+OR
+```
+php artisan vendor:publish --provider="Hivelink\Laravel\ServiceProviderLaravel9" --tag="config"
+```
 
 In the message appear, find the number of Hivelink, enter the related number then hit Enter. for Example in the below case you must enter **9** then enter:
 
