@@ -1,0 +1,37 @@
+{  
+   "name":"hivelink/laravel",
+   "description":"HiveLink Operator Library for Laravel!",
+   "type":"laravel-package",
+   "keywords":[  
+      "laravel",
+      "hivelink",
+      "sms",
+	  "inquiry",
+      "api"
+   ],
+   "authors":[  
+      {  
+         "name":"Hivelink API Team",
+         "email":"info@hivelink.co"
+      }
+   ],
+   "minimum-stability":"dev",
+   "require":{  
+      "hivelink/php":"*"
+   },
+   "autoload":{  
+      "psr-4":{  
+         "Hivelink\\Laravel\\":"src/"
+      }
+   },
+   "extra": {
+        "laravel": {
+            "providers": [
+                "Hivelink\\Laravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "Hivelink":"Hivelink\\Laravel\\Facade"
+            }
+        }
+    }
+}
