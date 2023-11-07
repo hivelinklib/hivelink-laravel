@@ -42,19 +42,6 @@
 composer require hivelink/laravel
 ```
 
-- **Method 2**:
-  Add this line to **Composer.json** file in your project
-
-```php
-"hivelink/php": "*"
-```
-
-Then run following command to download extension using **composer**
-
-```php
-$ composer update
-```
-
 ## Step 2
 
 Head to **config/app.php** and add this line to the end of **providers** Array:
@@ -88,29 +75,10 @@ Then in the **config/app.php** and add this line to the end of **aliases** Array
 Run this command in your project dirctory:
 
 ```
-php artisan vendor:publish
-```
-OR
-```
 php artisan vendor:publish --provider="Hivelink\Laravel\ServiceProvider" --tag="config"
 ```
 
-In the message appear, find the number of Hivelink, enter the related number then hit Enter. for Example in the below case you must enter **9** then enter:
-
-```bash
-Which provider or tag files would you like to publish?:
-[0 ] Publish files from all providers and tags listed below
-[1 ] Provider: Facade\Ignition\IgnitionServiceProvider
-[2 ] Provider: Fideloper\Proxy\TrustedProxyServiceProvider
-[3 ] Provider: Fruitcake\Cors\CorsServiceProvider
-[4 ] Provider: Illuminate\Foundation\Providers\FoundationServiceProvider
-[5 ] Provider: Illuminate\Mail\MailServiceProvider
-[6 ] Provider: Illuminate\Pagination\PaginationServiceProvider
-**_ [8 ] Provider: Hivelink\Laravel\ServiceProviderLaravel9_**
-.
-.
-.
-```
+In the message appear, find the number of Hivelink, enter the related number then hit Enter. 
 
 ## Step 4 - Api-Key
 
