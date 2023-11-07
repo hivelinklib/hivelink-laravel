@@ -15,7 +15,7 @@ class ServiceProviderLaravel8 extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__ . '/config/config.php' => config_path('hivelink.php')]);
+        $this->publishes([__DIR__ . '/config/config.php' => config_path('hivelink.php')],'config');
     }
     /**
      * Register the service provider.
